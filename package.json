@@ -1,0 +1,14 @@
+{
+  "name": "sight_reading_generator",
+  "version": "1.0.0",
+  "description": "tool to generate random melodies in notation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vexflow": "^3.0.9"
+  }
+}

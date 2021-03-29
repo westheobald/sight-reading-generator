@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Sight Reading Generator | Wes Theobald</title>
+    <meta
+      name="description"
+      content="Practice your sight reading with a random music notation generator. Control the key, interval type, and range!"
+    />
+    <meta name="keywords" content="sight reading, guitar sight reading" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Sight Reading Generator | Wes Theobald"
+    />
+    <meta
+      name="og:description"
+      property="og:description"
+      content="Practice your sight reading with a random music notation generator. Control the key, interval type, and range!"
+    />
+    <meta
+      name="og:image"
+      property="og:image"
+      content="https://westheobald.com/resources/css/img/lessons-background-min.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300&family=Montserrat:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link href="css/queries.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+    </header>
+    <div class="background">
+      <div class="app-description">
+        <h1>Sight Reading Generator</h1>
+        <div class="header-underline"></div>
+        <p>
+          This it a sight reading tool designed around practicing note
+          identification and music reading. Adjusts the settings
+          below and then click generate to get a new melody. Find more
+          information about the controls at the bottom of the page.
+        </p>
+      </div>
+    </div>
+
+    <div class="controls controls-1">
+      <div>
+        <label>Lowest Note</label>
+        <input type="range" min="0" max="30" value="9" id="lowNoteRange" />
+        <div id="lowNoteValue"></div>
+      </div>
+      <div>
+        <label>Interval Range</label>
+        <select id="skipRangeChange">
+          <option value="1">Easy</option>
+          <option value="2" selected>Medium</option>
+          <option value="3">Hard</option>
+          <option value="5">Advanced</option>
+        </select>
+      </div>
+      <div>
+        <label>Highest Note</label>
+        <input type="range" min="0" max="30" value="30" id="highNoteRange" />
+        <div id="highNoteValue"></div>
+      </div>
+    </div>
+    <div class="controls controls-2">
+      <div>
+        <label>Key</label>
+        <select id="keyChange">
+          <option value="C" selected>C Major / A Minor</option>
+          <option value="G">G Major / E Minor</option>
+          <option value="D">D Major / B Minor</option>
+          <option value="A">A Major / F# Minor</option>
+          <option value="E">E Major / C# Minor</option>
+          <option value="B">B Major / G# Minor</option>
+          <option value="F#">F# Major / D# Minor</option>
+          <option value="C#">C# Major / A# Minor</option>
+          <option value="F">F Major / D Minor</option>
+          <option value="Bb">Bb Major / G Minor</option>
+          <option value="Eb">Eb Major / C Minor</option>
+          <option value="Ab">Ab Major / F Minor</option>
+          <option value="Db">Db Major / Bb Minor</option>
+          <option value="Gb">Gb Major / Eb Minor</option>
+          <option value="Cb">Cb Major / Ab Minor</option>
+        </select>
+      </div>
+      <div>
+        <label>Rhythms</label>
+        <select id="rhythmChange">
+          <option value="1">Quarter Notes</option>
+          <option value="2">Eighth Notes</option>
+          <option value="3" selected>Quarter / Eighth</option>
+          <option value="4">Quarter / Eighth / Rests</option>
+        </select>
+      </div>
+      <div>
+        <label>Clef</label>
+        <select id="clefChange">
+          <option value="treble" selected>Treble</option>
+          <option value="bass">Bass</option>
+          <option value="alto">Alto</option>
+          <option value="tenor">Tenor</option>
+        </select>
+      </div>
+      <div></div>
+      <button class="generate-button" onclick="genMusic()">
+        Generate Music
+      </button>
+    </div>
+
+    <div class="notation" id="notation"></div>
+    <div class="sight-reading-info">
+      <ol>
+        <li>
+          <strong>Setting the Range:</strong>
+          <p>The lowest note and highest note sliders set the lowest and highest note that the generator will pick notes from. It defaults to the range of the guitar but you can change it to practice with other instruments or to limit yourself to focus on practicing in a particular position</p>
+          <p>If the lowest note is above the highest note the generator will return empty.</p>
+        </li>
+        <li>
+          <strong>Interval Range:</strong>
+          <p>You can also set the range of intervals that are used in the melody from easy (step-wise motion), medium (3rds), hard (4ths), and advanced (6ths).</p>
+        </li>
+        <li>
+          <strong>Rhythm Setting:</strong>
+          <p>The rhythm setting adjust the type of rhythms used. Right now you can select from only quarter notes, only eighth notes, a combination of the two, and the combination with rests (both quarter and eighth note lengths).</p>
+        </li>
+        <li>
+          <strong>Key and Clef:</strong>
+          <p>Change the key signature or clef using the drop down menus. For most clef changes you will also need to adjust the range to the instrument you are practicing with.</p>
+        </li>
+      </ol>
+    </div>
+
+    <footer class="clearfix">
+      <div class="copyright">
+        Copyright &copy; 2020 Wes Theobald. All Right Reserved.
+      </div>
+    </footer>
+    <script
+      defer
+      src="https://unpkg.com/vexflow/releases/vexflow-min.js"
+    ></script>
+    <script
+      defer
+      src="js/script.js"
+    ></script>
+  </body>
+</html>

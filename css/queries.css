@@ -1,0 +1,168 @@
+/* TABLET */
+@media only screen and (max-width: 1023px) {
+  section {
+    padding: 60px 2%;
+  }
+}
+
+/* LARGE PHONES */
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  section {
+    padding: 40px 4%;
+  }
+  header video {
+    height: 250px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    margin: 8px 0;
+  }
+  nav li:first-child,
+  nav li:last-child {
+    display: none;
+  }
+  h1 {
+    font-size: 210%;
+  }
+  .header-underline {
+    margin-bottom: 50px;
+  }
+
+  .active-page:link,
+  .active-page:visited,
+  nav a:active,
+  nav a:hover {
+    padding-top: 8px;
+  }
+
+  nav a:link,
+  nav a:visited {
+    padding-top: 8px;
+  }
+
+  nav a:link,
+  nav a:visited {
+    -webkit-text-decoration: underline dotted rgba(211, 211, 211, 0.747);
+    text-decoration: underline dotted rgba(211, 211, 211, 0.747);
+  }
+
+  .copyright {
+    float: none;
+    text-align: center;
+  }
+  footer ul {
+    float: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .session-pitch {
+    grid-template-columns: 1fr;
+  }
+  .spotify {
+    height: 300px;
+  }
+  .recording-process {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1%;
+  }
+
+  .lessons-pitch {
+    grid-template-columns: 1fr;
+  }
+  .lessons-pitch video {
+    margin-bottom: 30px;
+  }
+  .lessons-pricing {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .lessons-pricing-box {
+    max-height: 200px;
+    margin: 0 20% 40px 20%;
+  }
+  .lessons-pricing-box-info {
+    height: auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact img {
+    display: none;
+  }
+  
+  .controls {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .controls-1 {
+    padding: 40px 0 0 0;
+  }
+
+  .controls > * {
+    margin: 0 auto 20px auto;
+  }
+  .notation {
+    margin-top: 20px;
+  }
+
+  .blog-posts {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  .blog-element img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .blog-element-description {
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+
+/* MEDIUM PHONES */
+@media only screen and (max-width: 424px) {
+  nav li {
+    margin: 0 10px;
+  }
+  h1 {
+    font-size: 190%;
+  }
+  header img {
+    margin: 10px 10px 0 10px;
+  }
+  .home-page h1 {
+    font-size: 120%;
+  }
+  .recording-process {
+    grid-template-columns: 1fr;
+    margin: 0 50px;
+  }
+  .recording-process {
+    grid-template-columns: 1fr;
+  }
+  .session-pitch-list {
+    grid-template-columns: 1fr;
+  }
+  .session-pitch-list ul {
+    margin-bottom: 20px;
+  }
+}
+
+/* MEDIUM PHONES */
+@media only screen and (max-width: 374px) {
+  h1 {
+    font-size: 160%;
+  }
+}
